@@ -1,0 +1,22 @@
+<p>
+  shot works! {{shotId}}
+</p>
+<div class="shot" id="{{shotId}}" [routerLink]="['full-preview']">
+	    <div id="logo">
+	      	<img id="logo" [src]="[shot.thumbnail]"
+       			(mouseenter)="mouseOver($event, i)"
+       			(mouseleave)="mouseLeave($event, i)"
+       		>
+	    </div>
+	    <div id="title">
+	      {{shot.title}}
+	    </div>
+	    <div id="description">
+	      {{shot.description}}
+	    </div>
+	    <div id="platform">
+	      platform: {{shot.platforms}}
+	    </div>
+	</div>
+<router-outlet></router-outlet>
+
